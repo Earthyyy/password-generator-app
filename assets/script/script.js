@@ -47,10 +47,7 @@ const generatePassword = () => {
 
   let password = "";
 
-  if (!charCategories) {
-    passwordOptions.push(lowerCase)
-    charCategories = 1;
-  }
+  if (!charCategories) return "";
 
   for (let i  = 0; i < passwordLength; i++) {
     let category = passwordOptions[Math.floor(Math.random() * charCategories)]
@@ -113,7 +110,7 @@ const copyToClipboard = async () => {
 generateBtn.addEventListener('click',(event) => {
   event.preventDefault();
   let password = generatePassword();
-  estimateStrength(password)
+  if (password) estimateStrength(password)
 
 })
 
