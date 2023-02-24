@@ -468,12 +468,13 @@ button:hover path {
 
   .character-length legend ,
   .radio-field label,
-  .password-strength h3,
+  #password-strength h3,
   button > span{
     font-size: 1.125rem;
   }
 
-  .password-strength__state {
+  .password-strength__state,
+  .title {
     font-size: 1.5rem;
   }
 
